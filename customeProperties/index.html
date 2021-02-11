@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        my-element {
+            --primary-color: rgb(150, 57, 57);
+            --secondary-color: rgb(104, 107, 247);
+            --size-title: 2rem;
+            --size-text: 1rem;
+        }
+
+        my-element.blue {
+            --primary-color: rgb(38, 31, 138);
+            --secondary-color: rgb(88, 88, 92);
+            --size-title: 2rem;
+            --size-text: 1rem;
+        }
+
+        h2 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <my-element>
+        <span class='custome-title' slot='title'>Titulo</span>
+        <span slot='desc'>texto texto</span>
+    </my-element>
+    <my-element class='blue'>
+        <span slot='title'>Titulo</span>
+        <span slot='desc'>texto texto</span>
+    </my-element>
+
+
+    <my-element yellow>
+        <span slot='title'>Titulo</span>
+        <span slot='desc'>texto texto</span>
+        <span slot='otro'>texto texto</span>
+    </my-element>
+
+
+
+    <span class="content">
+        <my-element yellow>
+            <span slot='title'>Titulo</span>
+            <span slot='desc'>texto texto</span>
+        </my-element>
+    </span>
+    <script type="module" src="./my-element.js"></script>
+</body>
+
+</html>

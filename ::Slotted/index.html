@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <my-element>
+        <span class='custome-title' slot='title' >Titulo</span>
+        <span slot='desc' >texto texto</span>
+    </my-element>
+    <my-element class='blue' >
+        <span slot='title' >Titulo</span>
+        <span slot='desc' >texto texto</span>
+    </my-element>
+
+
+    <my-element yellow >
+        <span slot='title' >Titulo</span>
+        <span slot='desc' >texto texto</span>
+        <span slot='otro' >texto texto</span>
+    </my-element>
+
+
+
+    <span class="content">
+        <my-element yellow >
+            <span slot='title' >Titulo</span>
+            <span slot='desc' >texto texto</span>
+        </my-element>
+    </span>
+<script type="module" src="./my-element.js" ></script>
+</body>
+</html>
